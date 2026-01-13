@@ -1,6 +1,6 @@
 services:
   test-server:
-    image: ${DOCKERHUB_USERNAME}/protein-friends-test:latest
+    image: ${DOCKERHUB_USERNAME}/cicd-test:latest
     container_name: test-server
     ports:
       - "8080:8080"

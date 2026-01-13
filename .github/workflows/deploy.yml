@@ -16,7 +16,7 @@ jobs:
         include:
           - name: test
             context: test
-            imagename: protein-friends-test
+            imagename: cicd-test
 
     steps:
       - name: Checkout
@@ -50,7 +50,6 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.imagename }}:${{ github.sha }}
           build-args: |
             BUILDKIT_PROGRESS=plain
-            VITE_SERVER_ORIGIN=https://www.proteinfriends.shop
           outputs: type=image
           provenance: false
           no-cache: true
