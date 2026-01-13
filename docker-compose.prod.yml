@@ -1,0 +1,10 @@
+services:
+  test-server:
+    image: ${DOCKERHUB_USERNAME}/protein-friends-test:latest
+    container_name: test-server
+    ports:
+      - "8080:8080"
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    # 필요한 경우 여기에 .env.prod에서 사용할 환경 변수들을 추가할 수 있어.
